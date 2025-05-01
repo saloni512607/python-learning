@@ -1,0 +1,6 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        #Remove non-alphanumeric characters and convert to lowercase
+        clear = ''.join(c.lower() for c in s if c.isalnum())
+        # Check if cleaned string is equal to its reverse
+        return clear == clear[::-1]
